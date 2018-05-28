@@ -1,11 +1,12 @@
 import Express from 'express';
 const Router = Express.Router();
 
-import MainPage from './get/mainPage';
-import Admin    from './get/admin';
-import Login    from './get/login';
-import Register from './get/register';
-import Thread   from './get/thread';
+import MainPage     from './get/mainPage';
+import Admin        from './get/admin';
+import Profile      from './get/profile';
+import Login        from './get/login';
+import Register     from './get/register';
+import Thread       from './get/thread';
 
 import PostLogin                from './api/login';
 import createUser               from './api/createUser';
@@ -16,6 +17,7 @@ import updateResponseContent    from './api/updateResponseContent';
 
 //Get
 Router.use("/", MainPage);
+Router.use("/profile", Profile);
 Router.use("/admin", Admin);
 Router.use("/login", Login);
 Router.use("/register", Register);

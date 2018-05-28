@@ -12,6 +12,7 @@ Router.post("/thread", (req, res)=> {
 
     Thread.title = req.body.title;
     Thread.key = threadKey;
+    //TODO => change moi ça
     //Thread.authorKey = Firebase.app.auth().currentUser.uid;
     Firebase.ref("/threads/" + threadKey).set(Thread);
 

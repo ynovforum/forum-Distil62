@@ -1,5 +1,6 @@
 {
     "authorKey" : "USERKEY",
+    "threadKey" : "THREADKEY",
     "content" : "NoContent",
     "modified" : false,
     "deleted" : false,

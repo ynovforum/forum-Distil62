@@ -1,7 +1,7 @@
 import Express from 'express';
 const Router = Express.Router();
 
-Router.post("ResponseContent/:id", (req, res)=> {
+Router.post("ResponseContent/:key", (req, res)=> {
 
 
 });
