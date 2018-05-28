@@ -1,7 +1,7 @@
 {
     "key" : "NoKey",
     "title" : "NoTitle",
-    "Responses" : [],
+    "Responses" : {},
     "authorKey" : "USERKEY",
     "deleted" : false,
     "solved" : false
