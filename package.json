@@ -4,6 +4,8 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
+		"start": "babel-node ./src/back/index.js",
+		"dev": "/bin/bash .env",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {
@@ -17,10 +19,12 @@
 	},
 	"homepage": "https://github.com/ynovforum/forum-Distil62#readme",
 	"dependencies": {
-		"express": "^4.16.3"
+		"express": "^4.16.3",
+		"firebase": "^5.0.4"
 	},
 	"devDependencies": {
 		"babel-cli": "^6.26.0",
-		"babel-preset-env": "^1.7.0"
+		"babel-preset-env": "^1.7.0",
+		"dotenv": "^5.0.1"
 	}
 }
