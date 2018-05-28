@@ -20,7 +20,8 @@
 	"homepage": "https://github.com/ynovforum/forum-Distil62#readme",
 	"dependencies": {
 		"express": "^4.16.3",
-		"firebase": "^5.0.4"
+		"firebase": "^5.0.4",
+		"uuid": "^3.2.1"
 	},
 	"devDependencies": {
 		"babel-cli": "^6.26.0",

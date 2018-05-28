@@ -22,6 +22,7 @@ Router.use("/thread", Thread);
 Router.use("/api/post/create", createUser);
 Router.use("/api/post/create", createResponse);
 Router.use("/api/post/create", createThread);
+
 Router.use("/api/post/update", updateLike);
 Router.use("/api/post/update", updateResponseContent);
 
