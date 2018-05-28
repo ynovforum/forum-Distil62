@@ -16,6 +16,7 @@ Router.post('/response/:key', (req, res) => {
                 Response.authorKey = user.key;
                 Response.threadKey = req.params.key;
                 Response.content = req.body.content;
+                Response.key = responseKey;
 
                 if (!thread.responses)
                     thread.responses = [responseKey];

@@ -4,15 +4,18 @@ import Firebase from "../firebase";
      * Get all responses by Threads
      * ### Example usage
      * ```javascript
-     * Thread.responses = getResponsesByThread(["userKey1", "userKey2"])
+     * 
+     * Firebase.ref('/threads/' + threadKey).once('value').then(threadGet => {
+            let responsesOfThread = getResponsesByThread(threadGet.val());
+        })
      * 
      * //output
      * [{user}, {user}]
      * ```
-     * @param responsesKey Array of key responses it's the default value of thread.responses
+     * @param thread Object of Thread
  */
 export default (responsesKey) => {
-    return responsesKey.map(e=>{
+    return responsesKey.responses.map(e=>{
         return Firebase.ref('/responses/');
     })
 }
