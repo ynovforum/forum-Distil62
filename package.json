@@ -15,5 +15,12 @@
 	"bugs": {
 		"url": "https://github.com/ynovforum/forum-Distil62/issues"
 	},
-	"homepage": "https://github.com/ynovforum/forum-Distil62#readme"
+	"homepage": "https://github.com/ynovforum/forum-Distil62#readme",
+	"dependencies": {
+		"express": "^4.16.3"
+	},
+	"devDependencies": {
+		"babel-cli": "^6.26.0",
+		"babel-preset-env": "^1.7.0"
+	}
 }
