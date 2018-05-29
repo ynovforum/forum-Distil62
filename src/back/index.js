@@ -1,9 +1,11 @@
 import Express from "express";
 import Dotenv from "dotenv/config";
 import Routes from './routes/router';
+import path from 'path';
 
 const app = Express();
 
+app.use('/static', Express.static(__dirname + '/../front/public'));
 app.use(Express.urlencoded({extended: true}));
 app.use(Routes);
 
