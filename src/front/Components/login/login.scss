@@ -1,0 +1,7 @@
+$mid-width : 128 / 2;
+
+.icon-login {
+    position: relative;
+    bottom: $mid-width;
+    margin-bottom: $mid-width * -1;
+}

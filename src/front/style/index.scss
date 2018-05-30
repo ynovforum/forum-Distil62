@@ -1,1 +1,88 @@
+@import './color.scss';
+@import './global.scss';
+
 @import '../Components/index/index';
+@import '../Components/login/login';
+
+$dist-1 : 4px;
+$dist-2 : 8px;
+$dist-3 : 16px;
+$dist-4 : 24px;
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
+}
+
+.card {
+    box-shadow: 0px 0px 7px $text-light;
+}
+
+.column-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.full-width {
+    width: 100%;
+}   
+
+.sucess-back {
+    background-color: green;
+    color : $search-box;
+}                                                   
+
+.grey-back {
+    background-color: $text-light;
+}
+
+.light-grey-back {
+    background-color: $search-box;
+}
+
+.padding-1 {
+    padding: $dist-1;
+}
+
+.padding-2 {
+    padding: $dist-2;
+}
+
+.padding-3 {
+    padding: $dist-3;
+}
+
+.padding-4 {
+    padding: $dist-4;
+}
+
+.margin-1 {
+    margin: $dist-1;
+}
+
+.margin-2 {
+    margin: $dist-2;
+}
+
+.margin-3 {
+    margin: $dist-3;
+}
+
+.margin-4 {
+    margin: $dist-4;
+}
+
+.vertical-center {
+    margin-top: 25%;
+}
+
+.rounded {
+    border-radius: 100%;
+}
