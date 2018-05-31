@@ -16,3 +16,62 @@ $input-basic: #8c98a9;
 $btn-primary: #1071bb;
 $success: #26b10f;
 $danger: #ed1c24;
+
+.sucess-back {
+    color : white;
+    background-color: $success;
+    &:hover {
+        background-color: #20940c;
+    }
+    &:active {
+        background-color: #19690b;
+    }
+}
+
+.link-back {
+    color : white;
+    background-color: $menu-item;
+    &:hover {
+        background-color: rgb(0, 135, 184);
+    }
+    &:active {
+        background-color: rgb(0, 98, 134);;
+    }
+}
+
+.pinterest {
+    &-back {
+        background-color: #bd081c;
+    }
+    &-text {
+        color : #bd081c;
+    }
+}
+
+.dribble {
+    &-back {
+        background-color: #ea4c89        
+    }
+    &-text {
+        color: #ea4c89 
+    }
+}
+
+.twitter {
+    &-back {
+        background-color: #55acee
+    }
+    &-text {
+        color: #55acee
+    }
+}
+
+.facebook {
+    &-back {
+        background-color: #3b5999
+
+    }
+    &-text {
+        color : #3b5999;
+    }
+}

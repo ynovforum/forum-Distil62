@@ -11,7 +11,7 @@ Router.post("/user", (req, res)=> {
             User.key = response.user.uid;
             User.username = req.body.email;
             Firebase.ref("/users/" + response.user.uid).set(User);
-            res.send(req.body);
+            res.redirect("/")
         })
         .catch((error) => {
             console.error(error.code);

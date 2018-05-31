@@ -1,0 +1,20 @@
+.error-icon {
+    color: $danger;
+    &:hover {
+        background-color: $danger;
+    }
+}
+
+.sucess-icon {
+    color: $success;
+    &:hover {
+        background-color: $success;
+    }
+}
+
+i.sucess-icon, i.error-icon {
+    font-size: 18px;
+    position: relative;
+    bottom: 44px;
+    left: 47%;
+}

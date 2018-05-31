@@ -3,8 +3,15 @@
 }
 
 html {
-    color : black;
+    color : $text;
     height: 100%;
+}
+
+body {
+    background: url('https://cdn.discordapp.com/attachments/450559026338594827/451390550076293130/Question.png') !important;  
+    // background: url('https://cdn.discordapp.com/attachments/450559026338594827/450560444659138561/unknown.png') !important;    
+    background-repeat: no-repeat !important;
+    background-size: 100% auto !important;
 }
 
 h1{
@@ -64,13 +71,14 @@ a {
     font-weight : 600;
     font-size : 16px;
     line-height: 24px;
+    margin: 0 30px 0 12px;
     color : $menu-item;
     &:hover {
         color : $link-clicked;
     }
 }
 
-i {
+i.fas {
     font-size : 16px;
     color : $text-light;
     &:hover {
@@ -78,12 +86,29 @@ i {
     }
 }
 
-input, button {
+label {
+    float: left;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    color : $text-light;
+}
+
+input, button, select {
+    margin : 8px 0 18px 0;
     padding: 12px;
-    font-size: 12px;
+    font-size: 18px;
     border-radius: 4px;
     border: 1px solid $text-light;
-    @extend .margin-2;
+}
+
+input[type=button], input[type=submit], button {
+    border: none;
+}
+
+input[type=search] {
+    width: 330px;
+    font-size: 12px;
 }
 
 input[type=text], input[type=email], input[type=mail], input[type=password] {
@@ -92,9 +117,22 @@ input[type=text], input[type=email], input[type=mail], input[type=password] {
 }
 
 input.error {
+    color : white;
     border-color: $danger;
 }
 
 input.sucess {
+    color : white;
     border-color: $success;
 }
+
+select {
+    background-color: $background;
+    border: 2px solid $input-basic;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    &::-ms-expand {
+        display: none;
+    }
+}
+

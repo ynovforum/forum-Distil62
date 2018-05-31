@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Input from "../input/input";
 import Select from '../select/Select';
 
-class login extends Component {
+class Register extends Component {
     render() {
         return (
             <div className='container form-center'>
@@ -11,11 +11,11 @@ class login extends Component {
                         <div className='top-back'>
                             <div className='container'>
                                 <img className='icon-login' src='http://62.img.v4.skyrock.net/2642/50412642/pics/2937742181_1_3.gif' width='128px' height='128px'/>
-                                <h2>Welcome back! Please Login.</h2>
+                                <h2>Welcome! get started with a new account.</h2>
                             </div>
                         </div>
                         <div className='container form-container'>
-                            <form method='post' action='/api/post/do/login'>
+                            <form method='post' action='/api/post/create/user'>
                                 <div className='column-flex'>
                                     <Input label="Email" name='email' type='mail' placeholder='Addresse mail' className="full-width" required/>
                                     <Input label="Mot de passe" name='password' type='password' placeholder='Mot de passe' className="full-width" required/>
@@ -28,7 +28,7 @@ class login extends Component {
                                 <hr />
                             </div>
                             <div className="col col-6">
-                                Login via social network
+                                Signin via social network
                             </div>
                             <div className="col col-3">
                                 <hr />
@@ -59,10 +59,10 @@ class login extends Component {
                     </div>
                     <div className="row under-login">
                         <div className='col col-8'>
-                            <i>Don't have a account ? Get started!</i>
+                            <i>Already have a account ?</i>
                         </div>
                         <div className='col col-4 right'>
-                            <a href="/register">Register</a>
+                            <a href="/login">login</a>
                         </div>
                     </div>
                 </div>
@@ -71,4 +71,4 @@ class login extends Component {
     }
 }
 
-export default login;
+export default Register;

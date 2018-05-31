@@ -1,10 +1,66 @@
+.sucess-back {
+  color: white;
+  background-color: #26b10f;
+}
+.sucess-back:hover {
+  background-color: #20940c;
+}
+.sucess-back:active {
+  background-color: #19690b;
+}
+
+.link-back {
+  color: white;
+  background-color: #00AEEF;
+}
+.link-back:hover {
+  background-color: #0087b8;
+}
+.link-back:active {
+  background-color: #006286;
+}
+
+.pinterest-back {
+  background-color: #bd081c;
+}
+.pinterest-text {
+  color: #bd081c;
+}
+
+.dribble-back {
+  background-color: #ea4c89;
+}
+.dribble-text {
+  color: #ea4c89;
+}
+
+.twitter-back {
+  background-color: #55acee;
+}
+.twitter-text {
+  color: #55acee;
+}
+
+.facebook-back {
+  background-color: #3b5999;
+}
+.facebook-text {
+  color: #3b5999;
+}
+
 .sans-serif, a, p::before, p, h3, h2, h1 {
   font-family: "Source Sans Pro", sans-serif;
 }
 
 html {
-  color: black;
+  color: #393c3e;
   height: 100%;
+}
+
+body {
+  background: url("https://cdn.discordapp.com/attachments/450559026338594827/451390550076293130/Question.png") !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% auto !important;
 }
 
 h1 {
@@ -58,25 +114,43 @@ a {
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
+  margin: 0 12px 0 12px;
   color: #00AEEF;
 }
 a:hover {
   color: #009AD4;
 }
 
-i {
+i.fas {
   font-size: 16px;
   color: #71787e;
 }
-i:hover {
+i.fas:hover {
   color: #00AEEF;
 }
 
-input, button {
+label {
+  float: left;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #71787e;
+}
+
+input, button, select {
+  margin: 8px 0 18px 0;
   padding: 12px;
-  font-size: 12px;
+  font-size: 18px;
   border-radius: 4px;
   border: 1px solid #71787e;
+}
+
+input[type=button], input[type=submit], button {
+  border: none;
+}
+
+input[type=search] {
+  width: 330px;
 }
 
 input[type=text], input[type=email], input[type=mail], input[type=password] {
@@ -85,11 +159,49 @@ input[type=text], input[type=email], input[type=mail], input[type=password] {
 }
 
 input.error {
+  color: white;
   border-color: #ed1c24;
 }
 
 input.sucess {
+  color: white;
   border-color: #26b10f;
+}
+
+select {
+  background-color: #eff3f6;
+  border: 2px solid #8c98a9;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+select::-ms-expand {
+  display: none;
+}
+
+.valign {
+  display: flex;
+  align-items: center;
+}
+
+.error-icon {
+  color: #ed1c24;
+}
+.error-icon:hover {
+  background-color: #ed1c24;
+}
+
+.sucess-icon {
+  color: #26b10f;
+}
+.sucess-icon:hover {
+  background-color: #26b10f;
+}
+
+i.sucess-icon, i.error-icon {
+  font-size: 18px;
+  position: relative;
+  bottom: 44px;
+  left: 47%;
 }
 
 .test {
@@ -102,15 +214,73 @@ input.sucess {
   margin-bottom: -64;
 }
 
+.top-back {
+  background-color: #eff3f6;
+  border-bottom: solid 1px #81736a;
+}
+
+.form-container {
+  margin-top: 43px;
+  padding: 0 36px 0 36px;
+}
+
+.social-btn-container {
+  margin: 24px 0 24px 0;
+}
+
+.form-center {
+  width: 30%;
+}
+
+.social-button {
+  border: none;
+  cursor: pointer;
+  width: 79px;
+  padding: 12px;
+  margin: 0;
+  border-radius: 12px;
+}
+
+.in-social-button {
+  width: 100%;
+  height: 50px;
+  border-radius: 100%;
+  background-color: white;
+}
+
+.social-icon {
+  font-size: 24px;
+  margin-top: 12px;
+}
+
+.under-login {
+  margin-top: 28px;
+}
+
+.select-icon {
+  font-size: 18px;
+  position: relative;
+  bottom: 44px;
+  left: 47%;
+}
+
+.search-icon {
+  position: relative;
+  right: 35px;
+  font-size: 22px;
+}
+
 .center {
   text-align: center;
 }
 
 .right {
+  float: right;
   text-align: right;
 }
 
 .left {
+  float: left;
   text-align: left;
 }
 
@@ -127,53 +297,8 @@ input.sucess {
   width: 100%;
 }
 
-.sucess-back {
-  background-color: green;
-  color: #81736a;
-}
-
-.grey-back {
-  background-color: #71787e;
-}
-
-.light-grey-back {
-  background-color: #81736a;
-}
-
-.padding-1 {
-  padding: 4px;
-}
-
-.padding-2 {
-  padding: 8px;
-}
-
-.padding-3 {
-  padding: 16px;
-}
-
-.padding-4 {
-  padding: 24px;
-}
-
-.margin-1 {
-  margin: 4px;
-}
-
-.margin-2, input, button {
-  margin: 8px;
-}
-
-.margin-3 {
-  margin: 16px;
-}
-
-.margin-4 {
-  margin: 24px;
-}
-
 .vertical-center {
-  margin-top: 25%;
+  margin-top: 50%;
 }
 
 .rounded {
