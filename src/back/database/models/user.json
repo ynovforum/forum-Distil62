@@ -10,5 +10,6 @@
     "mail" : "NoMail",
     "bio" : "NoLife",
     "signature" : "NoSignature",
+    "createdDate" : "",
     "banned" : false
 }

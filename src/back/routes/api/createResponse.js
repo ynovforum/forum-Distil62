@@ -16,6 +16,7 @@ Router.post('/response/:key', (req, res) => {
         Response.threadKey = req.params.key;
         Response.content = req.body.content;
         Response.key = responseKey;
+        Response.createdDate = new Date();
 
         if (!thread.responses)
             thread.responses = [responseKey];

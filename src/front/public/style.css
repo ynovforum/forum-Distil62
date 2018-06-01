@@ -1,11 +1,36 @@
+.background-page {
+  background-color: #eff3f6;
+}
+
+.white-text, .featured-button {
+  color: white;
+}
+.white-back {
+  background-color: white;
+}
+
+.sucess-text {
+  color: #26b10f;
+}
 .sucess-back {
+  background-color: #26b10f;
+}
+
+.danger-text {
+  color: #ed1c24;
+}
+.danger-back {
+  background-color: #ed1c24;
+}
+
+button.sucess-back, input.sucess-back {
   color: white;
   background-color: #26b10f;
 }
-.sucess-back:hover {
+button.sucess-back:hover, input.sucess-back:hover {
   background-color: #20940c;
 }
-.sucess-back:active {
+button.sucess-back:active, input.sucess-back:active {
   background-color: #19690b;
 }
 
@@ -58,7 +83,6 @@ html {
 }
 
 body {
-  background: url("https://cdn.discordapp.com/attachments/450559026338594827/451390550076293130/Question.png") !important;
   background-repeat: no-repeat !important;
   background-size: 100% auto !important;
 }
@@ -114,7 +138,7 @@ a {
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
-  margin: 0 12px 0 12px;
+  margin: 0 30px 0 12px;
   color: #00AEEF;
 }
 a:hover {
@@ -123,10 +147,6 @@ a:hover {
 
 i.fas {
   font-size: 16px;
-  color: #71787e;
-}
-i.fas:hover {
-  color: #00AEEF;
 }
 
 label {
@@ -143,6 +163,10 @@ input, button, select {
   font-size: 18px;
   border-radius: 4px;
   border: 1px solid #71787e;
+  transition: box-shadow 0.2s ease-in-out;
+}
+input:hover, button:hover, select:hover {
+  box-shadow: 0 0 4px #8c98a9;
 }
 
 input[type=button], input[type=submit], button {
@@ -151,6 +175,7 @@ input[type=button], input[type=submit], button {
 
 input[type=search] {
   width: 330px;
+  font-size: 12px;
 }
 
 input[type=text], input[type=email], input[type=mail], input[type=password] {
@@ -178,9 +203,55 @@ select::-ms-expand {
   display: none;
 }
 
+img.responsive {
+  width: 100%;
+}
+
 .valign {
   display: flex;
   align-items: center;
+}
+
+.display-container {
+  position: relative;
+}
+
+.display-topright {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+}
+
+.card {
+  box-shadow: 0px 0px 7px #71787e;
+  max-height: 400px;
+  min-height: 500px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.card-height {
+  max-height: 500px;
+}
+
+.padding-card {
+  padding: 8px;
+}
+
+.card-content {
+  padding: 4px;
+}
+
+.featured-button {
+  background: #ffffff4d;
+}
+
+.card-icon {
+  font-size: 60px !important;
+}
+
+.card-title {
+  overflow: auto;
 }
 
 .error-icon {
@@ -204,8 +275,39 @@ i.sucess-icon, i.error-icon {
   left: 47%;
 }
 
-.test {
-  background-color: red;
+.nav-props {
+  width: 100%;
+  background-color: white;
+  padding: 14px 58px 0 37px;
+}
+
+.logo-nav {
+  margin-right: 6px;
+}
+
+.thread-list-container {
+  margin: 38px 14% 0 14%;
+}
+
+.padding-threads-left {
+  padding-left: 60px;
+}
+
+.menu-threads {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-threads-button {
+  background: none;
+  color: #393c3e;
+  border-radius: 8px;
+  margin: 0;
+  padding: 8px 44px 8px 12px;
+}
+.menu-threads-button:hover {
+  color: white;
+  background-color: #009AD4;
 }
 
 .icon-login {
@@ -282,10 +384,6 @@ i.sucess-icon, i.error-icon {
 .left {
   float: left;
   text-align: left;
-}
-
-.card {
-  box-shadow: 0px 0px 7px #71787e;
 }
 
 .column-flex {

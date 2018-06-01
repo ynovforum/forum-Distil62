@@ -17,7 +17,38 @@ $btn-primary: #1071bb;
 $success: #26b10f;
 $danger: #ed1c24;
 
-.sucess-back {
+.background-page {
+    background-color: $background;
+}
+
+.white { 
+    &-text {
+        color : white;
+    }
+    &-back {
+        background-color: white;
+    }
+}
+
+.sucess {
+    &-text {
+        color : $success;
+    }
+    &-back {
+        background-color: $success;
+    }
+}
+
+.danger {
+    &-text {
+        color : $danger;
+    }
+    &-back {
+        background-color: $danger;
+    }
+}
+
+button.sucess-back, input.sucess-back {
     color : white;
     background-color: $success;
     &:hover {

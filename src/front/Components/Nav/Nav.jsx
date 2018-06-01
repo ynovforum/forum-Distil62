@@ -24,7 +24,7 @@ class Nav extends Component {
     render() {
         return (
             <div>
-                <div className="row">
+                <div className="row nav-props">
                     <div className="col left">
                         <div className="row valign">                    
                             <a href="/"><img className="logo-nav" src='http://62.img.v4.skyrock.net/2642/50412642/pics/2937742181_1_3.gif' alt="logo" width='56px' height='56px'/></a>

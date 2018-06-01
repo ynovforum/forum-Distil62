@@ -10,7 +10,9 @@ class Register extends Component {
                     <div className='card center'>
                         <div className='top-back'>
                             <div className='container'>
-                                <img className='icon-login' src='http://62.img.v4.skyrock.net/2642/50412642/pics/2937742181_1_3.gif' width='128px' height='128px'/>
+                                <a href="/">
+                                    <img className='icon-login' src='http://62.img.v4.skyrock.net/2642/50412642/pics/2937742181_1_3.gif' width='128px' height='128px'/>  
+                                </a>
                                 <h2>Welcome! get started with a new account.</h2>
                             </div>
                         </div>

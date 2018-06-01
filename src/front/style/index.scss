@@ -1,13 +1,15 @@
 @import './color';
 @import './global';
 @import './dist';
+@import './display';
 
-@import '../Components/input/input.scss';
+@import '../Components/Card/Card';
+@import '../Components/input/input';
+@import '../Components/Nav/Nav';
 @import '../Components/index/index';
 @import '../Components/login/login';
 @import '../Components/select/select';
 @import '../Components/searchBox/searchBox';
-
 .center {
     text-align: center;
 }
@@ -20,10 +22,6 @@
 .left {
     float: left;
     text-align: left;
-}
-
-.card {
-    box-shadow: 0px 0px 7px $text-light;
 }
 
 .column-flex {

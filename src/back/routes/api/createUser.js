@@ -10,6 +10,7 @@ Router.post("/user", (req, res)=> {
         .then(response => {
             User.key = response.user.uid;
             User.username = req.body.email;
+            User.createdDate = new Date();            
             Firebase.ref("/users/" + response.user.uid).set(User);
             res.redirect("/")
         })

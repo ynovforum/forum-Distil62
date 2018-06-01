@@ -4,5 +4,6 @@
     "responses" : [],
     "authorKey" : "USERKEY",
     "deleted" : false,
-    "solved" : false
+    "solved" : false,
+    "createdDate" : ""
 }

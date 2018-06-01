@@ -13,11 +13,17 @@ Router.post("/thread", (req, res)=> {
 
     Thread.title = req.body.title;
     Thread.key = threadKey;
-    Thread.authorKey = Firebase.app.auth().currentUser.uid;
-    Response.authorKey = Thread.authorKey;
+    // Thread.authorKey = Firebase.app.auth().currentUser.uid;
+    Thread.createdDate = new Date().toDateString();
+    
+    // Response.authorKey = Thread.authorKey;
     Response.threadKey = threadKey;
     Response.content = req.body.content;
     Response.key = responseKey;
+    Response.createdDate = new Date().toDateString();    
+
+    console.log("THREAD : ", Thread);
+    console.log("RESPONSE : ", Response);
 
     Firebase.ref("/threads/" + threadKey).set(Thread);
     Firebase.ref('/responses/' + responseKey).set(Response);

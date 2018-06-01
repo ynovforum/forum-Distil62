@@ -8,8 +8,9 @@ html {
 }
 
 body {
-    background: url('https://cdn.discordapp.com/attachments/450559026338594827/451390550076293130/Question.png') !important;  
-    // background: url('https://cdn.discordapp.com/attachments/450559026338594827/450560444659138561/unknown.png') !important;    
+    // background: url('https://cdn.discordapp.com/attachments/450559026338594827/451390550076293130/Question.png') !important;  
+    // background: url('https://cdn.discordapp.com/attachments/450559026338594827/450560444659138561/unknown.png') !important;        
+    // background: url('https://media.discordapp.net/attachments/450559026338594827/450560840358166529/unknown.png') !important;    
     background-repeat: no-repeat !important;
     background-size: 100% auto !important;
 }
@@ -80,10 +81,6 @@ a {
 
 i.fas {
     font-size : 16px;
-    color : $text-light;
-    &:hover {
-        color : $menu-item;
-    }
 }
 
 label {
@@ -100,6 +97,10 @@ input, button, select {
     font-size: 18px;
     border-radius: 4px;
     border: 1px solid $text-light;
+    transition: box-shadow 0.2s ease-in-out;
+    &:hover {
+        box-shadow: 0 0 4px $input-basic;
+    }
 }
 
 input[type=button], input[type=submit], button {
@@ -136,3 +137,6 @@ select {
     }
 }
 
+img.responsive {
+    width: 100%;
+}

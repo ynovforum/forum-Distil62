@@ -6,5 +6,6 @@
     "modified" : false,
     "deleted" : false,
     "like" : 0,
-    "dislike" : 0
+    "dislike" : 0,
+    "createdDate" : ""    
 }
