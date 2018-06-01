@@ -1,6 +1,7 @@
 import React from 'react';
 import Select from '../select/Select';
 import Card from '../Card/Card';
+import ListThread from '../ListThread/ListThread';
 
 class Index extends React.Component {
     
@@ -14,6 +15,16 @@ class Index extends React.Component {
         this.listThread = Object.keys(this.props.threads).map(e => this.props.threads[e]);
         this.last = this.listThread.length - 1;
         this.beforlast = this.last - 1;
+    }
+
+    getListThreads()
+    {
+        if (this.listThread.length > 2)
+            this.listThread.splice(this.beforlast, 2);
+        else
+            this.listThread = [];
+
+        return <ListThread threads={this.listThread} />
     }
 
     render()
@@ -90,7 +101,7 @@ class Index extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="row">
+                        <div className="row valign">
                             <div className="col">
                                 <Card thread={this.listThread[this.last]} src='https://image.noelshack.com/fichiers/2018/22/5/1527842703-oscar-ivan-esquivel-arteaga-666572-unsplash.jpg' />
                             </div>
@@ -98,6 +109,7 @@ class Index extends React.Component {
                                 <Card thread={this.listThread[this.beforlast]} src='https://image.noelshack.com/fichiers/2018/22/5/1527848506-piotr-chrobot-276746-unsplash.jpg' />                            
                             </div>
                         </div>
+                        {this.getListThreads()}
                     </div>
                 </div>
             </div>
