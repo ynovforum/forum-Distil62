@@ -425,6 +425,10 @@ i.sucess-icon, i.error-icon {
   margin-bottom: 28px;
 }
 
+.details-response-content {
+  padding: 8px 4px 8px 4px;
+}
+
 .center {
   text-align: center;
 }

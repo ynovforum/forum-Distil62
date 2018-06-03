@@ -32,7 +32,7 @@ Router.post('/response/:key', (req, res) => {
         Firebase.ref('/threads/' + req.params.key).set(thread);
         Firebase.ref('/users/' + user.key).set(user);
 
-        res.send(Response);
+        res.redirect("/thread/" + thread.key);
     });
 });
 

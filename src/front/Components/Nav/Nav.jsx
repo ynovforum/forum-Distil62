@@ -67,10 +67,6 @@ class Nav extends Component {
                 <div className="col left">
                     <div className="row valign">                    
                         <a href="/"><img className="logo-nav" src='http://62.img.v4.skyrock.net/2642/50412642/pics/2937742181_1_3.gif' alt="logo" width='56px' height='56px'/></a>
-                        <a href="/#">Events <i className="fas fa-angle-down"></i></a>
-                        <a href="/#">Browse</a>
-                        <a href="/#">Your Tickets</a>
-                        <a href="/Users">Users</a>
                     </div>
                 </div>
                 <div className="col">
