@@ -8,6 +8,7 @@ import Login        from './get/login';
 import Register     from './get/register';
 import Thread       from './get/thread';
 import Logout       from './get/logout';
+import WriteThread  from "./get/writeThread";
 
 import PostLogin                from './api/login';
 import createUser               from './api/createUser';
@@ -19,6 +20,7 @@ import updateLike               from './api/updateLike';
 import updateResponseContent    from './api/updateResponseContent';
 import updateUser               from "./api/updateUser";
 
+
 //Get
 Router.use("/", MainPage);
 Router.use("/profile", Profile);
@@ -27,7 +29,7 @@ Router.use("/login", Login);
 Router.use("/register", Register);
 Router.use("/thread", Thread);
 Router.use("/logout", Logout);
-// Router.use("/add/thread", writeThread);
+Router.use("/add/thread", WriteThread);
 
 //Do
 Router.use("/api/post/do/", PostLogin);

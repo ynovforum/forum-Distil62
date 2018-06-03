@@ -228,6 +228,27 @@ img.responsive {
   top: 12px;
 }
 
+.error-icon {
+  color: #ed1c24;
+}
+.error-icon:hover {
+  background-color: #ed1c24;
+}
+
+.sucess-icon {
+  color: #26b10f;
+}
+.sucess-icon:hover {
+  background-color: #26b10f;
+}
+
+i.sucess-icon, i.error-icon {
+  font-size: 18px;
+  position: relative;
+  bottom: 44px;
+  left: 47%;
+}
+
 .card {
   box-shadow: 0px 0px 7px #71787e;
 }
@@ -255,27 +276,6 @@ img.responsive {
 
 .card-title {
   overflow: auto;
-}
-
-.error-icon {
-  color: #ed1c24;
-}
-.error-icon:hover {
-  background-color: #ed1c24;
-}
-
-.sucess-icon {
-  color: #26b10f;
-}
-.sucess-icon:hover {
-  background-color: #26b10f;
-}
-
-i.sucess-icon, i.error-icon {
-  font-size: 18px;
-  position: relative;
-  bottom: 44px;
-  left: 47%;
 }
 
 .nav-props {

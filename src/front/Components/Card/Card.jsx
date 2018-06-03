@@ -10,18 +10,22 @@ class Card extends Component {
     }
     
     render() {
+        if (this.props.thread)
+        {
         return (
             <div>
                 <div className="white-back card padding-card card-height">
                     <div className='img-container display-container'>
                         <img className='responsive' src={this.props.src}/>
-                        <button className='display-topright featured-button'>Featured</button>
+                        <a href={"/thread/" + this.props.thread.key}>
+                            <button className='display-topright featured-button'>Featured</button>
+                        </a>
                     </div>
                     <div className='card-content'>
                         <div className='row valign'>
                             <div className='col'>
                                 <h2 className='card-title'>{this.props.thread.title}</h2>
-                                <p>{this.props.thread.authorKey}</p>
+                                <p>{this.props.thread.authorKey.key}</p>
                             </div>
                             <div className='col'>
                                 { this.solvedOrNot() }
@@ -30,7 +34,10 @@ class Card extends Component {
                     </div>
                 </div>
             </div>
-        );
+            );
+        }
+        else
+        return <div></div>
     }
 }
 

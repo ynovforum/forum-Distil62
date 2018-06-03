@@ -8,26 +8,29 @@ import Response   from "../../database/models/response.json";
 const Router = Express.Router();
 
 Router.post("/thread", (req, res)=> {
-    let threadKey = uuid.v1();
-    let responseKey = uuid.v1();
-
-    Thread.title = req.body.title;
-    Thread.key = threadKey;
-    // Thread.authorKey = Firebase.app.auth().currentUser.uid;
-    Thread.createdDate = new Date().toDateString();
+    if (Firebase.app.auth().currentUser)
+    {
+        let threadKey = uuid.v4();
+        let responseKey = uuid.v4();
     
-    // Response.authorKey = Thread.authorKey;
-    Response.threadKey = threadKey;
-    Response.content = req.body.content;
-    Response.key = responseKey;
-    Response.createdDate = new Date().toDateString();    
-
-    console.log("THREAD : ", Thread);
-    console.log("RESPONSE : ", Response);
-
-    Firebase.ref("/threads/" + threadKey).set(Thread);
-    Firebase.ref('/responses/' + responseKey).set(Response);
-    res.send(Thread);
+        Response.authorKey = Firebase.app.auth().currentUser.uid;
+        Response.threadKey = threadKey;
+        Response.content = req.body.content;
+        Response.key = responseKey;
+        Response.createdDate = new Date().toDateString();    
+        
+        Thread.title = req.body.title;
+        Thread.key = threadKey;
+        Thread.authorKey = Response.authorKey;
+        Thread.createdDate = new Date().toDateString();
+        Thread.responses = [Response.key];
+        
+        Firebase.ref("/threads/" + threadKey).set(Thread);
+        Firebase.ref('/responses/' + responseKey).set(Response);
+        res.redirect("/thread/" + threadKey);
+    }
+    else
+        res.redirect("/");
 });
 
 export default Router;

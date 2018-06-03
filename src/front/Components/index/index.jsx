@@ -110,7 +110,7 @@ class Index extends React.Component {
                                 <Card thread={this.listThread[this.beforlast]} src='https://image.noelshack.com/fichiers/2018/22/5/1527848506-piotr-chrobot-276746-unsplash.jpg' />                            
                             </div>
                         </div>
-                        {this.getListThreads()}
+                        {/* {this.getListThreads()} */}
                     </div>
                 </div>
             </div>

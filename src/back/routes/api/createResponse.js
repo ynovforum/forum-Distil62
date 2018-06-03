@@ -10,7 +10,7 @@ const Router = Express.Router();
 Router.post('/response/:key', (req, res) => {
 
     getThreadAndUser(req.params.key, (thread, user)=>{
-        let responseKey = uuid.v1();
+        let responseKey = uuid.v4();
 
         Response.authorKey = user.key;
         Response.threadKey = req.params.key;

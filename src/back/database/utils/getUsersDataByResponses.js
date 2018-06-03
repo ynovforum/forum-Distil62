@@ -2,13 +2,13 @@ import Firebase from "../firebase";
 
 export default async function getAuthorKeyByResponses(responses) {
     
-    let threadList = Object.keys(responses);
-    let result;
+    let result = [];
+    let tmp;
     
     await Promise.all(
-        threadList.map(async elem => {
-            result = await Firebase.ref('/responses/' + elem).once("value");
-            responses[elem].authorKey = result.val();
+        responses.map(async elem => {
+            tmp = await Firebase.ref('/users/' + elem.authorKey).once("value");
+            elem.authorKey = tmp.val();
         })
     );
     return responses;

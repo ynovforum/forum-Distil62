@@ -19,16 +19,17 @@ export default async function getResponsesByThread(thread) {
     let result = [];
     let tmp;
 
-    await Promise.all(
-        thread.responses.map(async elem => {
-            tmp  = await Firebase.ref('/responses/' + elem).once("value");
-            result.push(tmp.val());
-        })
-    );
-
-
+    if (thread.responses)
+    {
+        await Promise.all(
+            thread.responses.map(async elem => {
+                tmp  = await Firebase.ref('/responses/' + elem).once("value");
+                result.push(tmp.val());
+            })
+        );
+    }    
     thread.responses = result;
-
+    
     return thread;
 }
 
