@@ -288,6 +288,33 @@ i.sucess-icon, i.error-icon {
   margin-right: 6px;
 }
 
+.drop-down {
+  box-shadow: 0 0 2px black;
+  background: white;
+  width: 120px;
+  position: absolute;
+  top: 57px;
+  right: 25px;
+}
+.drop-down-list {
+  list-style-type: none;
+  padding: 2px 4px 2px 4px;
+}
+
+.drop-down-title {
+  float: left;
+  text-align: left;
+}
+
+.drop-down-link {
+  margin: 0px;
+  width: 100%;
+}
+
+.drop-down-line {
+  padding: 12px;
+}
+
 .thread-list-container {
   margin: 38px 14% 0 14%;
 }
@@ -383,6 +410,19 @@ i.sucess-icon, i.error-icon {
 .list-thread-icon {
   font-size: 38px !important;
   margin-left: 25%;
+}
+
+.pading-profile {
+  padding: 32px;
+}
+
+.label-profile {
+  margin-right: 12px;
+  width: 120px;
+}
+
+.profile-element {
+  margin-bottom: 28px;
 }
 
 .center {

@@ -13,6 +13,7 @@ class Index extends React.Component {
     {
         super(props);
         this.listThread = Object.keys(this.props.threads).map(e => this.props.threads[e]);
+        this.listThread.reverse();
         this.last = this.listThread.length - 1;
         this.beforlast = this.last - 1;
     }

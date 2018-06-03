@@ -1,12 +1,18 @@
 import Express from 'express';
-import Firebase from '../../database/firebase';
-import getResponsesByThread from '../../database/utils/getResponsesByThread';
 const Router = Express.Router();
 
+import Firebase from '../../database/firebase';
+import getResponsesByThread from '../../database/utils/getResponsesByThread';
+
 Router.get("/:key", (req, res)=> {
-    Firebase.ref('/threads/' + req.params.key).once('value').then(threadGet => {
+    Firebase.ref('/threads/' + req.params.key).once('value').then(async threadGet => {
         let thread = threadGet.val();
-        let responses =  getResponsesByThread(thread);
+
+        console.log("AVANT : ",thread);
+        await getResponsesByThread(thread);
+        
+
+        console.log("APRES : ",thread);
 
         res.send(thread);
     })

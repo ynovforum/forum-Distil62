@@ -14,9 +14,21 @@ import Firebase from "../firebase";
      * ```
      * @param thread Object of Thread
  */
-export default (responsesKey) => {
-    return responsesKey.responses.map(e=>{
-        return Firebase.ref('/responses/');
-    })
+export default async function getResponsesByThread(thread) {
+
+    let result = [];
+    let tmp;
+
+    await Promise.all(
+        thread.responses.map(async elem => {
+            tmp  = await Firebase.ref('/responses/' + elem).once("value");
+            result.push(tmp.val());
+        })
+    );
+
+
+    thread.responses = result;
+
+    return thread;
 }
 

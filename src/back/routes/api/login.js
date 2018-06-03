@@ -7,6 +7,8 @@ Router.post("/login", (req, res)=> {
     Firebase.app.auth().signInWithEmailAndPassword(req.body.email, req.body.password).then(usr=>{
         Firebase.ref("/users/" + usr.uid).once("value").then((userGet)=>{
             res.redirect("/");
+        }).catch((error) => {
+            res.redirect("/login");
         })
     });
 });

@@ -1,4 +1,4 @@
-import Firebase from '../../database/firebase';
+import Firebase from "../firebase";
 
 /**
      * Get thread by key and current user

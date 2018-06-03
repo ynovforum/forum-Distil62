@@ -7,3 +7,30 @@
 .logo-nav {
     margin-right: 6px;
 }
+
+.drop-down {
+    box-shadow: 0 0 2px black;
+    background: white;
+    width: 120px;
+    position: absolute;
+    top: 57px;
+    right: 25px;
+    &-list {
+        list-style-type: none;
+        padding: 2px 4px 2px 4px;
+    }
+}
+
+.drop-down-title {
+    float: left;
+    text-align: left;
+}
+
+.drop-down-link {
+    margin : 0px;
+    width : 100%;
+}
+
+.drop-down-line {
+    padding: 12px;
+}

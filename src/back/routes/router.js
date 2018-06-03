@@ -7,6 +7,7 @@ import Profile      from './get/profile';
 import Login        from './get/login';
 import Register     from './get/register';
 import Thread       from './get/thread';
+import Logout       from './get/logout';
 
 import PostLogin                from './api/login';
 import createUser               from './api/createUser';
@@ -22,6 +23,8 @@ Router.use("/admin", Admin);
 Router.use("/login", Login);
 Router.use("/register", Register);
 Router.use("/thread", Thread);
+Router.use("/logout", Logout);
+// Router.use("/add/thread", writeThread);
 
 //Do
 Router.use("/api/post/do/", PostLogin);
