@@ -22,7 +22,7 @@ class Profile extends Component
             <div>
                 <div className="card container pading-profile">
                     <h1>Edit my profile</h1>
-                    <form action={"/update/user/" + this.props.user.key}  method="post">
+                    <form action="/api/post/update/user"  method="post">
                         <div className="row profile-element">
                             <div className="col col-6">
                                 <img className="responsive" width="258px" height="258px" src={this.props.user.icon} alt=""/>
@@ -50,7 +50,8 @@ class Profile extends Component
                         </div>
                             <input type="submit" value="Profile update"/>
                     </form>
-                    <form action={"/api/post/do/beAdmin" + this.props.user.key}  method="post">
+                    <label>Bouton pour le debug</label>
+                    <form action="/api/post/do/beAdmin"  method="post">
                         <input className="white-text pinterest-back" type="submit" value="Devenir admin"/>
                     </form>
                 </div>

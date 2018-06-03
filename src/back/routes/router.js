@@ -13,8 +13,11 @@ import PostLogin                from './api/login';
 import createUser               from './api/createUser';
 import createResponse           from './api/createResponse';
 import createThread             from './api/createThread';
+import beAdmin                  from "./api/beAdmim";
+
 import updateLike               from './api/updateLike';
 import updateResponseContent    from './api/updateResponseContent';
+import updateUser               from "./api/updateUser";
 
 //Get
 Router.use("/", MainPage);
@@ -28,6 +31,7 @@ Router.use("/logout", Logout);
 
 //Do
 Router.use("/api/post/do/", PostLogin);
+Router.use("/api/post/do/", beAdmin);
 
 //Create
 Router.use("/api/post/create", createUser);
@@ -37,5 +41,6 @@ Router.use("/api/post/create", createThread);
 //Update
 Router.use("/api/post/update", updateLike);
 Router.use("/api/post/update", updateResponseContent);
+Router.use("/api/post/update", updateUser);
 
 export default Router;
